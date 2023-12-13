@@ -1,1 +1,36 @@
 <!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>God Jul Henrik!</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="GodJulHenrik.css">
+
+<body>
+    <header>
+        <h1>God jul!</h1>
+    </header>
+    <div>
+        <h2 id="underoverskrift">For å feire jul her kan du lære noe om fugler:</h2>
+    </div>
+    <div id="fugler">
+        <div class="fuglebilder" id="blaameis">
+            <img src="blåmeis.jpg" alt="Blaameis">
+            <p class="infotekst"></p>
+        </div>
+        <div class="fuglebilder" id="dompapp_hann"></div>
+        <div class="fuglebilder" id="dompapp_hunn"></div>
+    </div>
+    <script>
+        var blaameisEl = document.getElementById("blaameis");
+        var blaameislyd = document.getElementById("blåmeis.mp3");
+        blaameisEl.addEventListener("mouseover", blaameisinfo);
+
+        function blaameisinfo() {
+            blaameislyd.play();
+
+        }
+    </script>
+</body>
+
+</html>
