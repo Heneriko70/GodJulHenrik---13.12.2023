@@ -14,21 +14,37 @@
         <h2 id="underoverskrift">For å feire jul her kan du lære noe om fugler:</h2>
     </div>
     <div id="fugler">
-        <div class="fuglebilder" id="blaameis">
-            <img src="blåmeis.jpg" alt="Blaameis">
-            <p class="infotekst"></p>
+        <div class="fuglebilder">
+            <img id="bmeis" src="blåmeis.jpg" alt="Blaameis">
+            <p id="blaameis_tekst" style="display: none;">Dette er en dompap</p>
+            <audio id="blaameislyd" style="display: none;" controls>
+                <source src="blåmeis.mp3" type="audio/mp3">
+            </audio>
         </div>
-        <div class="fuglebilder" id="dompapp_hann"></div>
+        <div class="fuglebilder" id="dompapp_hann">
+            <img id="dompap_hann" src="dompap_hann.jpg" alt="Dompapp hann">
+            <p class="dompap_hann_tekst"></p>
+            <audio id="dompap_hann_lyd" style="display: none;" controls>
+                <source src="dompap.mp3" type="audio/mp3">
+        </div>
         <div class="fuglebilder" id="dompapp_hunn"></div>
     </div>
     <script>
-        var blaameisEl = document.getElementById("blaameis");
-        var blaameislyd = document.getElementById("blåmeis.mp3");
-        blaameisEl.addEventListener("mouseover", blaameisinfo);
-
+        var bmeis = document.querySelector("#bmeis");
+        var blaameis_tekst = document.querySelector("#blaameis_tekst");
+        bmeis.addEventListener("mouseover", blaameisinfo);
+        var blaameislyd = document.querySelector("#blaameislyd");
+        var dompap_hann = document.querySelector("#dompap_hann");
+        var dompap_hann_tekst = document.querySelector(".dompap_hann_tekst");
+        dompap_hann.addEventListener("mouseover", dompap_hann_info);
+        var dompap_hann_lyd = document.querySelector("#dompap_hann_lyd");
         function blaameisinfo() {
             blaameislyd.play();
-
+            blaameis_tekst.style.display = "block";
+        }
+        function dompap_hann_info() {
+            dompap_hann_lyd.play();
+            dompap_hann_tekst.innerHTML = "Dette er en dompap hann"
         }
     </script>
 </body>
