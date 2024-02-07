@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        #myImage {
+            position: relative;
+            width: 200px;
+        }
+
+        #hoverText {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 20px;
+            display: none;
+        }
+
+        #myImage:hover #hoverText {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="myImage">
+        <img src="dompap_hann.jpg" alt="Hover Image" width="100%" height="auto">
+        <div id="hoverText">Your Text</div>
+    </div>
+</body>
+
+</html>
